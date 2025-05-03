@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="centered">
+        <h1>Do you love me? 💕</h1>
+        <div>
+            <button onclick="handleYes()" id="yesBtn">Yes</button>
+            <button onclick="handleNo()" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+
+        function handleYes() {
+            document.getElementById("yesBtn").style.transform = "scale(1.1)";
+            document.getElementById("noBtn").style.transform = "scale(0.9)";
+            setTimeout(() => window.location.href = "cake.html", 1000);
+        }
+
+        function handleNo() {
+            const messages = ["Are you sure?", "Please say yes 🥺", "I love you...", "Just say yes ❤️","😣yess bolo naaa","u love me naaaa😭😭","i know u love mee😘💕","aab jaldi yessss bolll😒","pakka nahi bolna aapko 🥲","aab to bol do dil ki baat🥰❤️","plsssssssssssssssss mera cry aaa gaya hai😭😭","aab mai naraj hu...isliye yess bolo naa..😫 "];
+            document.querySelector("h1").innerText = messages[noClickCount % messages.length];
+            noClickCount++;
+        }
+    </script>
+</body>
+
+</html>
