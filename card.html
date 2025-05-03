@@ -1,0 +1,34 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Birthday Wish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="centered">
+        <h1>Tap the Card 💌</h1>
+        <div class="card" onclick="flipCard()">
+            <div class="card-inner" id="cardInner">
+                <div class="card-front">💖 Tap to reveal 💖</div>
+                <div class="card-back">
+                    My dearest love,<br>
+                    On your special day, I just want to say,
+                    You light up my world like nobody else.
+                    Happy Birthday! mere dumboooo 🎉💝<br>
+                    – With all my love, Sameer
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipCard() {
+            document.getElementById("cardInner").classList.toggle("flipped");
+        }
+    </script>
+</body>
+
+</html>
