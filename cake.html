@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cake Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="centered">
+        <h1>Let’s Cut the Cake 🎂</h1>
+        <div id="cakeContainer">
+            <div id="cake" class="cake">
+                <div class="layer layer1"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer3"></div>
+                <div class="candle"></div>
+            </div>
+            <button class="cut-btn" onclick="cutCake()">Cut the Cake</button>
+        </div>
+        <div id="wishMsg" class="wish-msg"></div>
+    </div>
+
+    <script>
+        function cutCake() {
+            document.getElementById("cake").style.transform = "scale(0)";
+            document.getElementById("cake").style.transition = "transform 1s ease";
+            setTimeout(() => {
+                document.getElementById("wishMsg").innerText = "Happy Birthday, My Love! 💖";
+                document.getElementById("wishMsg").style.fontSize = "2rem";
+            }, 1000);
+            setTimeout(() => window.location.href = "wish.html", 3000);
+        }
+    </script>
+</body>
+
+</html>
